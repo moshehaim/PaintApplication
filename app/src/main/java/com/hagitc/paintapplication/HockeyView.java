@@ -18,7 +18,7 @@ public class HockeyView extends SurfaceView implements Runnable{
     private Disk disk;
     private Paddle up;
     private Paddle down;
-    private SurfaceHolder holder;
+    private SurfaceHolder holder ;
     private Canvas canvas;
     private Thread thread; //#1
     private int interval = 50;
