@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".PaintActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="match_parent"
+        android:id="@+id/mainPaint"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/stam"
+        android:onClick="rect"
+        android:text="Rect"
+         />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_toRightOf="@id/stam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Line"
+        android:onClick="line"
+        android:alpha="0.3"
+         />
+
+        <Button
+            android:id="@+id/btnDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delet"
+            android:onClick="delete"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Undo"
+            android:layout_alignParentRight="true"
+            android:onClick="undo"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:id="@+id/stam"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:tag="#E91E63"
+        android:onClick="changeColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button2"
+        android:backgroundTint="#E91E63"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:tag="#673AB7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/button3"
+        android:layout_alignTop="@id/button3"
+        android:onClick="changeColor"
+        android:backgroundTint="#673AB7"/>
+    <Button
+        android:id="@+id/button5"
+        android:tag="#FFEB3B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/button4"
+        android:layout_alignTop="@id/button3"
+        android:onClick="changeColor"
+        android:backgroundTint="#FFEB3B"/>
+    <SeekBar
+        android:id="@+id/sbWidth"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:min="6"
+        android:max="20"
+        android:layout_toRightOf="@id/button5"
+        android:layout_alignTop="@id/button3"
+        android:layout_alignBottom="@id/button3"/>
+    </RelativeLayout>
